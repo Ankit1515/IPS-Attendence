@@ -9,6 +9,8 @@
         android:minSdkVersion="16"
         android:targetSdkVersion="28" />
 
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <application
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -19,6 +21,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.ipsattendence.ScanCodeActivity" />
         <activity android:name="com.example.ipsattendence.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

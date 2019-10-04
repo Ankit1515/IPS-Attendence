@@ -8,7 +8,7 @@ import com.google.zxing.Result;
 
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
-class ScanCodeActivity extends AppCompatActivity implements ZXingScannerView.ResultHandler{
+public class ScanCodeActivity extends AppCompatActivity implements ZXingScannerView.ResultHandler{
 
     ZXingScannerView ScannerView;
 
@@ -22,7 +22,8 @@ class ScanCodeActivity extends AppCompatActivity implements ZXingScannerView.Res
     @Override
     public void handleResult(Result result) {
         MainActivity.txtTitle.setText(result.getText());
-        onBackPressed();
+        ScannerView.setResultHandler(this);
+        ScannerView.startCamera();
     }
 
     @Override
